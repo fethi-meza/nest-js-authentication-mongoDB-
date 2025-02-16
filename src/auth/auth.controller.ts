@@ -1,5 +1,6 @@
-import { Controller } from '@nestjs/common';
+import { Body,Controller, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
+import { singupDto } from './dtos/singuo.dtos';
 
 @Controller('auth')
 export class AuthController {
@@ -7,7 +8,10 @@ export class AuthController {
 
 
   //post signup request(creating new user)
+@Post('signup')
+async signup(@Body() SignupData: singupDto) {
 
+}
 
   //post login request
 
